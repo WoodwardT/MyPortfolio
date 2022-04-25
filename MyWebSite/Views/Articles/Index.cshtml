@@ -1,0 +1,72 @@
+﻿@model IEnumerable<MyPortfolio.Models.Article>
+
+@*@model MyPortfolio.Models.PagedList<MyPortfolio.Models.Article>
+*@
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["Banner"] = "Articles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<div class="row justify-content-md-center">
+    <div class="col-9">
+        <h1 class="text-center display-5 mb-3">@ViewData["Banner"]</h1>
+        <div class="p-4 text-black bg-light fs-5 lh-base mb-3 text-black-50">
+            Below is a diverse selections of articles about me that have been in the news. They range from snow boarding to track building to video production.
+        </div>
+    </div>
+</div>
+<br /><br />
+<h2 class="section-title"><span>Articles</span></h2>
+<br /><br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auther)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Body)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Slug)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+
+
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Auther)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Body)
+            </td>
+            <td>
+                <a href="@item.Slug">@item.Slug</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<partial name="_PagingCenter" />
+

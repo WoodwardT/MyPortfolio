@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MyPortfolio.Models.About>
+
+@{
+    ViewData["Title"] = "Tom";
+    ViewData["Banner"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <img id="croping" class="img-circle" src="images/SIT.jpg" alt="">
+
+
+<div class="row justify-content-md-center">
+    <div class="col-9">
+        <h1 class="text-center display-5 mb-3">@ViewData["Title"]</h1>
+        <div class="p-4 text-black bg-light fs-5 lh-base mb-3 text-black-50">
+        I am a software development student at SIT and I live in Queenstown.  For hobbies I like all outdoor sports, video making and foreign languages.
+        Below is a gallery of some of my photography.</div>
+    </div>
+</div>
+
+<div class="row justify-content-md-center mb-5 container">
+    <div class="col-9">
+        <div class="col-lg-12 text-center my-2">
+            <br /><br />
+            <h2 class="section-title"><span>Photography</span></h2>
+            <br /><br />
+        </div>
+        <div class="portfolio-item row">
+            @foreach (var item in Model)
+            {
+
+                <div class="item col-lg-3 col-md-4 col-6 col-sm">
+                    <a href="@Html.DisplayFor(modelItem => item.Slug)" class="fancylight popup-btn" data-fancybox-group="light">
+                        <img class="img-fluid" src="@Html.DisplayFor(modelItem => item.Pic)" alt="">
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+﻿@model MyPortfolio.Models.ListModel
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Banner"] = "Tom Woodward";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+
+<header id="header">
+    <div id="head">
+
+        <h1 id="head" class="text-center">
+            <img class="img-circle" src="images/ProfileSelfie.jpg" alt="">
+            <span class="title text-opacity-10"> @ViewData["Banner"]</span>
+            <span class="tagline">
+                IT Student<br>
+               <strong><a style="color:#5E5E5E;" href = "mailto: tomwoodwardvideos@gmail.com">tomwoodwardvideos@gmail.com</a></strong>
+            </span>
+        </h1>
+
+    </div>
+</header>
+
+
+
+<main id="main">
+
+    <div class="container">
+
+        <div class="row section topspace">
+            <div class="col-md-12">
+                <p id="blurb" class="lead text-center text-muted">
+                    I have a range of skills in different areas including IT, languages, film production,track building and scaffolding.
+                    My last two previous jobs were building the <a href="https://youtu.be/wlfNcpRq-Io">Pike 29 Memorial track</a>,
+                    New Zealand's great walk and <a href="https://youtu.be/U7Xlyfr0ud0">scaffolding in the mines</a> in Western Australia.
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <!-- /Skills section -->
+
+        <div class="row section featured topspace">
+            <h2 class="section-title"><span>Skills</span></h2>
+            <div class="row">
+                @foreach (var item in Model.SkillModel.Take(8))
+                {
+                    <div class="col-sm-6 col-md-3">
+                        <h3 class="text-center">@Html.DisplayFor(modelItem => item.Name)</h3>
+                        <span class="details">@item.Description.Substring(0, Math.Min(item.Description.Length, 100))...</span>
+                        <h4>@Html.DisplayFor(modelItem => item.Percentage)%</h4>
+                        <p class="text-center"><a href="https://localhost:7166/Skills" class="btn btn-action">Read more</a></p>
+                    </div>
+                }
+            </div>
+        </div>
+
+
+
+
+        <!-- /Recent Works section -->
+
+        <div class="row section recentworks topspace">
+            <h2 class="section-title"><span>Work</span></h2>
+            <div class="thumbnails recentworks row">
+                @foreach (var item in Model.PortfolioModel.Take(6))
+                {
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <a class="thumbnail" href="https://localhost:7166/Portfolio">
+                            <span class="img">
+                                <img src="@item.Pic" alt="">
+                                <span class="cover"><span class="more">See details &rarr;</span></span>
+                            </span>
+                            <span class="title">@Html.DisplayFor(modelItem => item.Title)</span>
+                        </a>
+                        <span class="details">@item.Description.Substring(0, Math.Min(item.Description.Length, 150))</span>
+                        <p></p>
+                    </div>   
+                       }
+            </div>
+        </div>
+
+
+
+
+        <!-- /Send a message section -->
+
+        <div class="row g-0 pt-5 pb-5 fs-6 justify-content-md-center messagebox">
+            <h2 class="section-title"><span>Contact</span></h2>
+            <h4 id="blurb">Send me a message</h4>
+            <div class="col-7">
+                <form asp-controller="Contact" asp-action="LeaveMessage" method="post">
+                    <div class="pb-4 pt-2 row g-0">
+                        <div class="form-floating col pe-4">
+                            <input type="email" class="form-control" id="Email" name="Email" placeholder="name@example.com">
+                            <label for="Email">Email address</label>
+                        </div>
+                        <div class="form-floating col">
+                            <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Your Name">
+                            <label for="FullName">  Your Name</label>
+                        </div>
+                    </div>
+                        <div class="pb-4 form-floating">
+                            <textarea class="form-control" placeholder="Message" id="Message" name="Message" style="height: 100px"></textarea>
+                            <label for="Message">Message</label>
+                        </div>
+                    <div class="pb-4"><button type="submit" class="btn btn-light text-uppercase">send a message</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

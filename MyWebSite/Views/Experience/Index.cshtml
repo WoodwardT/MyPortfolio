@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MyPortfolio.Models.Experience>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["Banner"] = "Experience";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<div class="row justify-content-md-center">
+    <div class="col-9">
+        <h1 class="text-center display-5 mb-3">@ViewData["Banner"]</h1>
+        <div class="p-4 text-black bg-light fs-5 lh-base mb-3 text-black-50">
+            My previous work experience has been in track building, mining and boat building.
+            During the construction of the Pike 29 Memorial Track my crew and I spent three years toiling in often extreme conditions. I captured the story in a ripping short film that recently picked up a gong at the NZ Mountain Film Festival.
+        </div>
+    </div>
+</div>
+<br /><br />
+<h2 class="section-title"><span>Jobs</span></h2>
+<br /><br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateAt)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Contact Me";
+    ViewData["Banner"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<div class="row justify-content-md-center">
+    <div class="col-9">
+        <h1 class="text-center display-5 mb-3">@ViewData["Banner"]</h1>
+        <div class="p-4 text-black bg-light fs-5 lh-base mb-3 text-black-50">
+            Please fill in the contact form below. This will send a message directly to the system for me to review.
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+<h2 class="section-title"><span>Contact Form</span></h2>
+<br />
+<br />
+
+<div class="container">
+    <div class="row g-0 pt-5 pb-5 fs-6 justify-content-md-center messagebox">
+        <div class="col-3 text-white text-end lh-lg pe-3">
+            <h1 class="fs-4">Write a message</h1>
+            <p>If you have questions, feel free to enquire by using the message box on the right </p>
+            <p>My social media</p>
+
+        </div>
+        <div class="col-6">
+            <form asp-controller="Contact" asp-action="LeaveMessage" method="post">
+                <div class="pb-4 pt-2 row g-0">
+                    <div class="form-floating col pe-3">
+                        <input type="email" class="form-control" id="Email" name="Email" placeholder="name@example.com">
+                        <label for="Email">Email address</label>
+                    </div>
+                    <div class="form-floating col">
+                        <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Your Name">
+                        <label for="FullName">Your Name</label> 
+                    </div>
+                </div>
+                <div class="pb-4 form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="Message" name="Message" style="height: 100px"></textarea>
+                    <label for="Message">Message</label>
+                </div>
+                <div class="pb-4">
+                    <button type="submit" class="btn btn-light text-uppercase">send a message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,631 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+
+
+
+/* My added CSS */
+/********************************************************************
+
+
+                                HEADER
+
+
+*********************************************************************/
+
+#head {
+    background: url(../images/ProfileBackground.jpg) top center;
+    background-size: cover;
+/*    color: #7C7C7C;
+*/    padding: 30px 0 35px 0;
+}
+
+    #head img.img-circle {
+        display: block;
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        border: 9px solid rgba(0, 0, 0, 0.05);
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    #head .title {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        font-weight: 300;
+        font-size: 2.25rem;
+        letter-spacing: 1px;
+        color: #5E5E5E;
+    }
+
+        #head .title a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+    #head .tagline {
+/*        display: block;
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.2em;
+        color: #7C7C7C;*/
+        margin: 5px 0 0;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        font-weight: 300;
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+    }
+
+        #head .tagline b {
+            font-weight: normal;
+        }
+
+        #head .tagline a {
+/*            color: #5E5E5E;
+*/        }
+
+.home #head {
+    padding: 90px 0;
+}
+
+    .home #head .title {
+        font-size: 49px;
+        font-size: 3.0625rem;
+    }
+
+    .home #head .tagline {
+        font-size: 16px;
+        font-size: 1rem;
+        margin: 15px 0 0;
+    }
+
+
+/********************************************************************
+
+
+                                 CONTENT
+
+
+*********************************************************************/
+
+#email{
+    padding: 10px;
+    margin: 20px;
+}
+
+#blurb {
+    padding: 50px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #bd1550;
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active {
+        color: #fff;
+        background-color: #e61f65;
+    }
+
+.btn-action {
+    font-weight: bold;
+    background: transparent !important;
+    border: 1px solid #333;
+    text-shadow: none;
+}
+
+    .btn-action:hover,
+    .btn-action:focus,
+    .btn-action:active,
+    .btn-action.active {
+        color: #bd1550;
+        border-color: #bd1550;
+    }
+
+.btn-lg {
+    padding: 15px 60px;
+    font-size: 12px;
+    line-height: 1.33;
+    font-weight: bold;
+}
+
+.panel-cta {
+    box-shadow: 0 0 0 1px #e1e1e1, 0 0 0 3px #fff, 0 0 0 4px #e1e1e1;
+    background: #f3f3f3;
+    -webkit-border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0;
+    -moz-background-clip: padding;
+    border-radius: 0;
+    background-clip: padding-box;
+}
+
+    .panel-cta p,
+    .panel-cta h3,
+    .panel-cta h4,
+    .panel-cta h5,
+    .panel-cta h6 {
+        margin: 0;
+    }
+
+    .panel-cta .panel-body {
+        padding: 35px;
+    }
+
+/* Section - Recent works */
+.thumbnails {
+    padding: 0;
+}
+
+    .thumbnails li {
+        margin-bottom: 30px;
+    }
+
+    .thumbnails .details {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        font-size: 0.75rem;
+    }
+
+.thumbnail {
+    display: block;
+    -webkit-border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0;
+    -moz-background-clip: padding;
+    border-radius: 0;
+    background-clip: padding-box;
+    border: 0 none;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+    .thumbnail .img {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        height: 200px;
+        margin: 0 0 20px;
+        position: relative;
+    }
+
+    .thumbnail .title {
+        text-transform: uppercase;
+        margin: 0 2em;
+        display: block;
+        text-indent: 0;
+    }
+
+    .thumbnail .cover {
+        position: absolute;
+        display: block;
+        opacity: 0;
+        width: 100%;
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.8);
+        -webkit-transition-property: all;
+        -moz-transition-property: all;
+        -o-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 550ms;
+        -moz-transition-duration: 550ms;
+        -o-transition-duration: 550ms;
+        transition-duration: 550ms;
+    }
+
+        .thumbnail .cover .more {
+            position: absolute;
+            bottom: 15px;
+            right: 0;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 20px;
+            -webkit-border-radius: 1px 0 0 1px;
+            -webkit-background-clip: padding-box;
+            -moz-border-radius: 1px 0 0 1px;
+            -moz-background-clip: padding;
+            border-radius: 1px 0 0 1px;
+            background-clip: padding-box;
+            font-size: 12px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            background: #84b7ce;
+            color: white;
+        }
+
+    .thumbnail img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+/*    .thumbnail:hover {
+        color: #333;
+        text-decoration: none;
+    }*/
+
+/*        .thumbnail:hover img {
+            -webkit-filter: saturate(0%);
+        }*/
+
+        .thumbnail:hover .cover {
+            opacity: 1;
+        }
+
+
+/* pagination */
+.pagination > li > a {
+    color: #808080;
+    border: 0 none;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-family: Georgia, serif;
+}
+
+    .pagination > li > a:hover {
+        color: #000000;
+        background: none;
+    }
+
+.pagination > li.active > a {
+    color: #333333;
+    background: none;
+}
+
+    .pagination > li.active > a:hover {
+        color: #000000;
+        background: none;
+    }
+
+
+
+
+/********************************************************************
+
+
+               Homepage Titles (Skills, Recent works) and Border
+
+
+*********************************************************************/
+
+/*text center*/
+.section-title,
+.entry-title {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px 0 25px;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-size: 2.25rem;
+    letter-spacing: 1px;
+
+}
+
+    .section-title a,
+    .entry-title a {
+        color: #333333;
+    }
+
+    .section-title span,
+    .entry-title span {
+        display: inline-block;
+        position: relative;
+    }
+
+  
+        .section-title span:before,
+/*        .entry-title span:before,
+*/
+        .section-title span:after,
+        .entry-title span:after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            top: .53em;
+            width: 400%;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+
+        .section-title span:before,
+        .entry-title span:before {
+            right: 100%;
+            margin-right: 45px;
+        }
+
+
+
+        .section-title span:after,
+        .entry-title span:after {
+            left: 100%;
+            margin-left: 45px;
+        }
+
+
+    /*Max page width
+    */
+    .container {
+        max-width: 1200px;
+    }
+
+
+
+
+/********************************************************************
+
+
+                                 About Page
+
+
+*********************************************************************/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/* .container{
+	width:90%
+	margin:10px auto;
+} */
+.portfolio-menu {
+    text-align: center;
+}
+
+    .portfolio-menu ul li {
+        display: inline-block;
+        margin: 0;
+        list-style: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        -webkit-transition: all 05s ease;
+        -moz-transition: all 05s ease;
+        -ms-transition: all 05s ease;
+        -o-transition: all 05s ease;
+        transition: all .5s ease;
+    }
+
+.portfolio-item {
+    /*width:100%;*/
+}
+
+    .portfolio-item .item {
+        /*width:303px;*/
+        float: left;
+        margin-bottom: 10px;
+    }
+#croping {
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 46%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 34%;
+    opacity: 0.7;
+    box-shadow: 0 0 8px 8px white inset;
+}
+/********************************************************************
+
+
+                                 FOOTER
+
+
+*********************************************************************/
+.footer-dark {
+    padding: 50px 0;
+    color: #f0f9ff;
+    background-color: #282d32;
+}
+
+    .footer-dark h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .footer-dark ul {
+        padding: 0;
+        list-style: none;
+        line-height: 1.6;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+        .footer-dark ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.6;
+        }
+
+            .footer-dark ul a:hover {
+                opacity: 0.8;
+            }
+
+@media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+.footer-dark .item.text {
+    margin-bottom: 36px;
+}
+
+@media (max-width:767px) {
+    .footer-dark .item.text {
+        margin-bottom: 0;
+    }
+}
+
+.footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+}
+
+.footer-dark .item.social {
+    text-align: center;
+}
+
+@media (max-width:991px) {
+    .footer-dark .item.social {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.footer-dark .item.social > a {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75;
+}
+
+    .footer-dark .item.social > a:hover {
+        opacity: 0.9;
+    }
+
+.footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+/********************************************************************
+
+
+                      FORMSPREE FORM GUESTBOOK
+
+
+*********************************************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Prosto+One);
+
+* {
+    -webkit-transition: all 0.3s ease;
+}
+
+body {
+/*    overflow: hidden;*/
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Prosto One', cursive;
+    background: url('https://subtlepatterns.com/patterns/egg_shell.png');
+    _background: #eee;
+}
+
+#login-form {
+    color: #777;
+    border: 0px solid #afafaf;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 120px;
+    text-align: left;
+    padding: 40px;
+    padding-top: 20px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 8px #777;
+    background: rgba(255, 255, 255, 0.6);
+    background-color: #84b7ce;
+}
+
+/*input {
+    color: #777;
+    font-weight: bold;
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #afafaf;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    outline: none;
+}*/
+
+    input[type="button"] {
+        color: white;
+        width: 30%;
+        border: 0px solid transparent;
+        outline: none;
+        cursor: pointer;
+    }
+
+/*#login {
+    background: #51AC74;
+}
+
+#register {
+    background: #5C8AE6;
+}*/
+
+/********************************************************************
+
+
+                      CONTACT FORM
+
+
+*********************************************************************/
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 3px solid green;
+}
+
+
+

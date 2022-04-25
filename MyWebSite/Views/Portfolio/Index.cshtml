@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MyPortfolio.Models.Portfolio>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["Banner"] = "Portfolio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+<div class="row justify-content-md-center">
+    <div class="col-9">
+        <h1 class="text-center display-5 mb-3">@ViewData["Banner"]</h1>
+        <div class="p-4 text-black bg-light fs-5 lh-base mb-3 text-black-50">
+            Below is a selection of the videos projects that I have produced. The project called 3 Years in the mines is currently only able to be viewed with the private link provided because it is waiting to be released after the New Zealand Mountain Film Festival debut.
+        </div>
+    </div>
+</div>
+
+
+
+<br /><br />
+<h2 class="section-title"><span>Projects</span></h2>
+<br /><br />
+<table class="table">
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    <img class="img-fluid shadow" src="@item.Pic" />
+                </td>
+                <td>
+                    <a href="@item.Slug">@item.Slug</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateAt)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<partial name="_Paging" />

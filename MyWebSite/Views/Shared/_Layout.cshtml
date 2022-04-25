@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyPortfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyPortfolio.styles.css" asp-append-version="true" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+
+<body>
+    <div class="container box-shadow border-top mt-3">
+        <partial name="_Nav" />
+        <div id="head" class="banner p-10 mb-4" src="images/ProfileBackground.jpg">
+            <div id="head" class="p-4 p-md-5 mb-4 text-black-50 bg-info"  >
+                <div class="px-0 text-center">
+                    <h1 class="title fst-italic text-opacity-50">&#60; @ViewData["Banner"] &#62;</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+
+
+        <div class="container footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Skills</h3>
+                            <ul>
+                                <li><a href="https://www.sit.ac.nz/programme/id/10870/campus/Queenstown/xmps/17003?course=New%20Zealand%20Diploma%20in%20Software%20Development%20(Level%206)" target="_blank">Software</a></li>
+                                <li><a href="https://youtu.be/wlfNcpRq-Io" target="_blank">Track Building</a></li>
+                                <li><a href="https://youtu.be/wlfNcpRq-Io" target="_blank">Video Production</a></li>
+                                <li><a href="https://youtu.be/U7Xlyfr0ud0" target="_blank">Scaffolding</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="https://youtu.be/wlfNcpRq-Io" target="_blank">Projects</a></li>
+                                <li><a href="https://youtu.be/b_BUQUSVSD8" target="_blank">Languages</a></li>
+                                <li><a href="https://www.sit.ac.nz/Programme/Course/Bachelor_of_Information_Technology" target="_blank">Education</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3>Tom Woodward</h3>
+                            <p>Tom Woodward and his crew spent three years toiling in often extreme conditions to construct the Pike29 Memorial Track as part of the newly minted DOC Paparoa Track.</p>
+                        </div>
+                        <div class="col item social"><a href="https://twitter.com/TomWoodwardVids"><i class="icon ion-social-twitter"></i></a><a href="https://www.youtube.com/c/TomWoodwardVideos"><i class="icon ion-social-youtube"></i></a><a href="https://www.instagram.com/tom.woodward.videos/"><i class="icon ion-social-instagram"></i></a></div>
+                    </div>
+                    <p class="copyright">Tom Woodward © 2022</p>
+                </div>
+            </footer>
+        </div>
+
+
+
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

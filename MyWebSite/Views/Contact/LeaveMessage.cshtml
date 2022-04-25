@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Contact Me";
+    ViewData["Banner"] = "Contact";
+}
+
+<div class="container">
+    <div style="background-color:#84b7ce;" class="row g-0 justify-content-md-center mb-5">
+        <div class="col-9">
+            <h1 class="text-center display-4"> @ViewData["Title"]</h1>
+
+            <div class="content fs-4 lh-base">
+                <p class="fs-5 mb-5">@Html.Raw(ViewData["msg"])</p>
+                <p class="fs-5">If you have any questions send me an email at tomwoodwardvideos@gmail.com</p>
+            </div>
+
+            <div class="pb-4"><button type="submit" onclick="history.back()" style="background-color:#5E5E5E;" class="btn btn-light text-uppercase text-light">Return</button></div>
+        </div>
+    </div>
+</div>

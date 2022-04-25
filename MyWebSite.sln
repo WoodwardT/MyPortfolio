@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyPortfolio", "MyWebSite\MyPortfolio.csproj", "{18A4EEBC-67AC-49FC-9187-0F380C88E389}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxPagedList", "MaxPagedList\MaxPagedList.csproj", "{A0A1A708-9214-4C96-B7CE-9CD94684ABA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18A4EEBC-67AC-49FC-9187-0F380C88E389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A4EEBC-67AC-49FC-9187-0F380C88E389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A4EEBC-67AC-49FC-9187-0F380C88E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A4EEBC-67AC-49FC-9187-0F380C88E389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A1A708-9214-4C96-B7CE-9CD94684ABA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A1A708-9214-4C96-B7CE-9CD94684ABA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A1A708-9214-4C96-B7CE-9CD94684ABA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A1A708-9214-4C96-B7CE-9CD94684ABA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AF6BD45-06C3-4D25-8763-ABC1D7ADE1DA}
+	EndGlobalSection
+EndGlobal
