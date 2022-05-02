@@ -20,11 +20,19 @@ namespace MyPortfolio.Controllers
             _context = context;
         }
 
-        // GET: Skills
-        public async Task<IActionResult> Index()
+        // GET: Skills/ Pagination
+        public async Task<IActionResult> Index(int page = 1)
         {
-            return View(await _context.Skill.ToListAsync());
+            int pageSize = 5;
+            IQueryable<Skill> skillIQ = from m in _context.Skill select m;
+            skillIQ = skillIQ.OrderByDescending(m => m.Id);
+
+            PagedList<Skill> skills = await PagedList<Skill>.CreateAsync(skillIQ, page, pageSize);
+
+            return View(skills);
         }
+
+
 
         // GET: Skills/Details/5
         public async Task<IActionResult> Details(int? id)

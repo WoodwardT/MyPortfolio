@@ -568,7 +568,7 @@ body {
     _background: #eee;
 }
 
-#login-form {
+#formspree-form {
     color: #777;
     border: 0px solid #afafaf;
     width: 30%;
@@ -582,6 +582,14 @@ body {
     background: rgba(255, 255, 255, 0.6);
     background-color: #84b7ce;
 }
+
+
+/*@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}*/
 
 /*input {
     color: #777;

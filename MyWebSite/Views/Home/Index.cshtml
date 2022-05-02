@@ -15,7 +15,7 @@
             <span class="title text-opacity-10"> @ViewData["Banner"]</span>
             <span class="tagline">
                 IT Student<br>
-               <strong><a style="color:#5E5E5E;" href = "mailto: tomwoodwardvideos@gmail.com">tomwoodwardvideos@gmail.com</a></strong>
+                <strong><a style="color:#5E5E5E;" href="mailto: tomwoodwardvideos@gmail.com">tomwoodwardvideos@gmail.com</a></strong>
             </span>
         </h1>
 
@@ -78,8 +78,8 @@
                         </a>
                         <span class="details">@item.Description.Substring(0, Math.Min(item.Description.Length, 150))</span>
                         <p></p>
-                    </div>   
-                       }
+                    </div>
+                }
             </div>
         </div>
 
@@ -93,23 +93,29 @@
             <h4 id="blurb">Send me a message</h4>
             <div class="col-7">
                 <form asp-controller="Contact" asp-action="LeaveMessage" method="post">
-                    <div class="pb-4 pt-2 row g-0">
-                        <div class="form-floating col pe-4">
-                            <input type="email" class="form-control" id="Email" name="Email" placeholder="name@example.com">
-                            <label for="Email">Email address</label>
+
+                    <div class="pb-4 row g-3 row">
+                        <div class="col">
+                            <input type="email" class="form-control" id="Email" name="Email" placeholder="Email address" aria-label="Email">
                         </div>
-                        <div class="form-floating col">
-                            <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Your Name">
-                            <label for="FullName">  Your Name</label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Full name" aria-label="Full name">
                         </div>
                     </div>
-                        <div class="pb-4 form-floating">
-                            <textarea class="form-control" placeholder="Message" id="Message" name="Message" style="height: 100px"></textarea>
-                            <label for="Message">Message</label>
-                        </div>
+
+                    <div class="pb-4 form-floating">
+                        <textarea class="form-control" placeholder="Message" id="Message" name="Message" style="height: 100px"></textarea>
+                        <label for="Message">Message</label>
+                    </div>
                     <div class="pb-4"><button type="submit" class="btn btn-light text-uppercase">send a message</button></div>
+
                 </form>
             </div>
+
+
+
+
+
         </div>
     </div>
 </main>

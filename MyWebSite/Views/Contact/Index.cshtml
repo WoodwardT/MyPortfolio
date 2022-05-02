@@ -30,14 +30,12 @@
         </div>
         <div class="col-6">
             <form asp-controller="Contact" asp-action="LeaveMessage" method="post">
-                <div class="pb-4 pt-2 row g-0">
-                    <div class="form-floating col pe-3">
-                        <input type="email" class="form-control" id="Email" name="Email" placeholder="name@example.com">
-                        <label for="Email">Email address</label>
+                <div class="pb-4 row g-3 row">
+                    <div class="col">
+                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Email address" aria-label="Email">
                     </div>
-                    <div class="form-floating col">
-                        <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Your Name">
-                        <label for="FullName">Your Name</label> 
+                    <div class="col">
+                        <input type="text" class="form-control" id="FullName" name="FullName" placeholder="Full name" aria-label="Full name">
                     </div>
                 </div>
                 <div class="pb-4 form-floating">
