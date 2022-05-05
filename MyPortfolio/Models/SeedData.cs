@@ -158,13 +158,13 @@ namespace MyPortfolio.Models
                 {
                 Title = "(Private Link) 3 years in the Australian mines! (What it's really like) | FIFO from Bali",
                 Description = "The Pike 29 Memorial Track was built as a living memorial to the men who died in the 2010 Pike mining disaster. It was sculpted into the landscape by passionate mountain bikers and track builders and is a world-class and first-of-its-kind mountain bike track which doubles and New Zealand’s 10th Great Walk.This video shows some of the exploits of the team who built it called the Bush Walruses.MTB track designer and digger operator Milty Coultas, explosives specialist and track shaper Tom Woodward, and tree fellers Logan and Felix.We cut the track through the bush over three long years while exposed, battered and frost bitten by the elements on the West Coast the most extreme construction site that any of us had worked at.This video featured in the 2020 New Zealand Mountain Film Festival.",
-                Pic = "/images/Pike29Track.jpg",
+                Pic = "/images/3YearsInTheMines.jpg",
                 Slug = "https://youtu.be/wlfNcpRq-Io"
                 },
                 new Portfolio{
                 Title = "Building a $12MD Bike Trail | The Pike 29 Track",
                 Description = "Many New Zealanders have made their way to Australia chasing the mining boom. In the state of W.A Thousands of guys work Fly in Fly out jobs in outback mines. Due to the vast distances to the nearest cities, an entire industry has developed of FIFO workers who have relocated permanently the tropical paradise of Bali, and fly in out to the mines from there. This video chronicles 3 years of one Kiwi working in the mines while living in Bali.It attempts to be a window into that world and show the pros and cons of the lifestyle, at once dangerous, exciting and dull.",
-                Pic = "/images/3YearsInTheMines.jpg",
+                Pic = "/images/Pike29Track.jpg",
                 Slug = "https://youtu.be/U7Xlyfr0ud0"
                 },
                 new Portfolio{
