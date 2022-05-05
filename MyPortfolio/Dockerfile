@@ -19,6 +19,8 @@ RUN dotnet build "MyPortfolio.csproj" -c Release -o /app/build
 FROM build AS publish
 RUN dotnet publish "MyPortfolio.csproj" -c Release -o /app/publish
 
+# copy database to the image
+COPY "/MyPortfolio/db" "/app/publish/db"
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
